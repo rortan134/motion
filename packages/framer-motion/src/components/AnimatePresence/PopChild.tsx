@@ -1,10 +1,10 @@
 "use client"
 
-import { isHTMLElement } from "motion-dom"
-import * as React from "react"
-import { useContext, useId, useInsertionEffect, useRef } from "react"
+import { isHTMLElement } from "motion-dom";
+import * as React from "react";
+import { useContext, useId, useInsertionEffect, useRef } from "react";
 
-import { MotionConfigContext } from "../../context/MotionConfigContext"
+import { MotionConfigContext } from "../../context/MotionConfigContext";
 
 interface Size {
     width: number
@@ -108,8 +108,6 @@ export function PopChild({ children, isPresent, anchorX, root }: Props) {
         }
 
         return () => {
-            parent.removeChild(style)
-
             if (parent.contains(style)) {
                 parent.removeChild(style)
             }
